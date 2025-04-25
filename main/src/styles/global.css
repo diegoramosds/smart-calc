@@ -40,6 +40,9 @@ body {
   gap: 10px;
   margin-top: 20px;
 }
+.calculator-display input{
+color: var(--backgorund);
+}
 .calculator-buttons button {
   width: 70%;
   height: 65px;
