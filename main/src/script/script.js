@@ -2,24 +2,34 @@ function button() {
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn")) {
       const el = e.target.textContent;
-      console.log(el);
       showDisplay(el);
     }
   });
 }
 button();
 
+let displayValues = [];
+let displayValue = document.getElementById("display").defaultValue;
+
 function showDisplay(textValue) {
-  let display = document.getElementById("#display");
-  display = [];
-
-  if (textValue) {
-    display.push(textValue);
+  if (textValue === "C") {
+    displayValues = [];
+  } else if (textValue === "←") {
+    displayValues.pop();
+  } else if (textValue === "=") {
+    count();
+  } else if (textValue) {
+    displayValues.push(textValue);
   }
-  console.log(textValue);
-}
-showDisplay();
 
+  document.getElementById("display").defaultValue = displayValues.join("");
+}
+
+function count() {
+  const result = eval(displayValues.join(""));
+  displayValues = [result];
+}
+count();
 function convert() {
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("convert")) {
@@ -27,5 +37,4 @@ function convert() {
     }
   });
 }
-
 convert();
