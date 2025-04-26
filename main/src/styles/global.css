@@ -40,8 +40,12 @@ body {
   gap: 10px;
   margin-top: 20px;
 }
-.calculator-display input{
-color: var(--backgorund);
+.calculator-display input[type="text"] {
+  color: var(--backgorund);
+}
+.calculator-display input[type="radio"] {
+  color: #ffff;
+  width: 100px;
 }
 .calculator-buttons button {
   width: 70%;
@@ -61,8 +65,13 @@ color: var(--backgorund);
 }
 
 #convert {
-    width: 100%;
-    border-radius: 20%;
-    }
+  width: 100%;
+  border-radius: 10px;
+}
 
-
+.convert-options {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
