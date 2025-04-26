@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/global.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" />
     <title>Smart Calc</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main-calculator">
-        <div class="calculator-display">
-            <input type="text" id="display" disabled>
+      <div class="calculator-display">
+        <input type="text" id="display" disabled />
+
+        <div class="convert-options">
+          <label for="radio1">
+            Dolár
+            <input
+              type="radio"
+              id="radio1 radio"
+              name="radio"
+              value="option1"
+              checked
+          /></label>
+          <label for="radio2">
+            Euro
+            <input
+              type="radio"
+              id="radio2 radio"
+              name="radio"
+              value="option1"
+              checked
+          /></label>
+          <label for="radio3">
+            Real
+            <input
+              type="radio"
+              id="radio3 radio"
+              name="radio"
+              value="option1"
+              checked
+            />
+          </label>
         </div>
-        <div class="calculator-buttons">
-            <button class="btn" id="clear">C</button>
-            <button class="btn" id="backspace">←</button>
-            <button class="btn" id="divide">/</button>
-            <button class="btn" id="multiply">*</button>
-            <button class="btn" id="seven">7</button>
-            <button class="btn" id="eight">8</button>
-            <button class="btn" id="nine">9</button>
-            <button class="btn" id="subtract">-</button>
-            <button class="btn" id="four">4</button>
-            <button class="btn" id="five">5</button>
-            <button class="btn" id="six">6</button>
-            <button class="btn" id="add">+</button>
-            <button class="btn" id="one">1</button>
-            <button class="btn" id="two">2</button>
-            <button class="btn" id="three">3</button>
-            <button class="btn" id="equals">=</button>
-            <button class="btn zero-btn" id="zero">0</button>
-            <button class="btn" id="decimal">.</button>
-            <button class="btn convert" id="convert">Coversão de moeda</button>
-        </div>
+      </div>
+      <div class="calculator-buttons">
+        <button class="btn" id="clear">C</button>
+        <button class="btn" id="backspace">←</button>
+        <button class="btn" id="divide">/</button>
+        <button class="btn" id="multiply">*</button>
+        <button class="btn" id="seven">7</button>
+        <button class="btn" id="eight">8</button>
+        <button class="btn" id="nine">9</button>
+        <button class="btn" id="subtract">-</button>
+        <button class="btn" id="four">4</button>
+        <button class="btn" id="five">5</button>
+        <button class="btn" id="six">6</button>
+        <button class="btn" id="add">+</button>
+        <button class="btn" id="one">1</button>
+        <button class="btn" id="two">2</button>
+        <button class="btn" id="three">3</button>
+        <button class="btn" id="equals">=</button>
+        <button class="btn zero-btn" id="zero">0</button>
+        <button class="btn" id="decimal">.</button>
+        <button class="btn convert" id="convert">Coversão de moeda</button>
+      </div>
     </div>
     <script src="./script/script.js"></script>
-</body>
+  </body>
 </html>
