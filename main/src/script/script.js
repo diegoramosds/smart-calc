@@ -18,7 +18,7 @@ function showDisplay(textValue) {
     displayValues.pop();
   } else if (textValue === "=") {
     count();
-  } else if (textValue) {
+  } else if (textValue && textValue !== "Coversão de moeda") {
     displayValues.push(textValue);
   }
 
@@ -29,11 +29,11 @@ function count() {
   const result = eval(displayValues.join(""));
   displayValues = [result];
 }
-count();
+
 function convert() {
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("convert")) {
-      console.log("Hello, world!");
+      console.log("Convert button clicked");
     }
   });
 }
