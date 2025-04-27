@@ -25,10 +25,12 @@ function showDisplay(textValue) {
   document.getElementById("display").defaultValue = displayValues.join("");
 }
 
+
 function count() {
   const result = eval(displayValues.join(""));
   displayValues = [result];
 }
+
 
 function convert() {
   document.addEventListener("click", (e) => {
