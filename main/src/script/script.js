@@ -59,7 +59,6 @@ function convert() {
         fetch(
           `https://v6.exchangerate-api.com/v6/5c1f1304281e25c1eb546983/latest/EUR`
         )
-          
           .then((res) => res.json())
           .then((data) => {
             let rate = data.conversion_rates.BRL;
